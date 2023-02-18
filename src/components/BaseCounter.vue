@@ -1,23 +1,15 @@
-<script>
-export default {
-    components: {},
-    props: {},
-    data() {
-        return {
-            count: 0,
-        };
-    },
-    computed: {},
-    methods: {
-        increment() {
-            this.count++;
-        },
+<script setup>
+import { ref } from "vue";
 
-        decrement() {
-            this.count--;
-        },
-    },
-};
+const count = ref(0);
+
+function increment() {
+    ++count.value;
+}
+
+function decrement() {
+    --count.value;
+}
 </script>
 <template>
     <div>
